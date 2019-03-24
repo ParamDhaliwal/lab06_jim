@@ -1,11 +1,9 @@
 <?php namespace Config;
-
 /**
  * Database Configuration
  *
  * @package Config
  */
-
 class Database extends \CodeIgniter\Database\Config
 {
 	/**
@@ -15,7 +13,6 @@ class Database extends \CodeIgniter\Database\Config
 	 * @var string
 	 */
 	public $filesPath = APPPATH . 'Database/';
-
 	/**
 	 * Lets you choose which connection group to
 	 * use if no other is specified.
@@ -23,7 +20,6 @@ class Database extends \CodeIgniter\Database\Config
 	 * @var string
 	 */
 	public $defaultGroup = 'default';
-
 	/**
 	 * The default database connection.
 	 *
@@ -32,9 +28,9 @@ class Database extends \CodeIgniter\Database\Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => '',
+		'username' => 'root',
 		'password' => '',
-		'database' => '',
+		'database' => 'Lab06',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
@@ -50,7 +46,6 @@ class Database extends \CodeIgniter\Database\Config
 		'failover' => [],
 		'port'     => 3306,
 	];
-
 	/**
 	 * This database connection is used when
 	 * running PHPUnit database tests.
@@ -78,20 +73,16 @@ class Database extends \CodeIgniter\Database\Config
 		'failover' => [],
 		'port'     => 3306,
 	];
-
 	//--------------------------------------------------------------------
-
 	public function __construct()
 	{
 		parent::__construct();
-
 		// Ensure that we always set the database group to 'tests' if
 		// we are currently running an automated test suite, so that
 		// we don't overwrite live data on accident.
 		if (ENVIRONMENT === 'testing')
 		{
 			$this->defaultGroup = 'tests';
-
 			// Under Travis-CI, we can set an ENV var named 'DB_GROUP'
 			// so that we can test against multiple databases.
 			if ($group = getenv('DB'))
@@ -99,7 +90,6 @@ class Database extends \CodeIgniter\Database\Config
 				if (is_file(TESTPATH . 'travis/Database.php'))
 				{
 					require TESTPATH . 'travis/Database.php';
-
 					if (! empty($dbconfig) && array_key_exists($group, $dbconfig))
 					{
 						$this->tests = $dbconfig[$group];
@@ -108,7 +98,5 @@ class Database extends \CodeIgniter\Database\Config
 			}
 		}
 	}
-
 	//--------------------------------------------------------------------
-
 }
