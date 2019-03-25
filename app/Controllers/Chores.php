@@ -4,6 +4,7 @@ use CodeIgniter\Controller;
 
 class Pages extends Controller
 {
+	// THIS FUNCTION NEEDS TO BE CHANGED
 	public function view($page = 'home')
 	{
 		if ( ! is_file(APPPATH.'/Views/pages/'.$page.'.php'))

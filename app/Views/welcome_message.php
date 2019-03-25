@@ -105,15 +105,7 @@
 			</div>
 
 			<div class="guide">
-				<h2>Contributions</h2>
-
-				<ul>
-					<li> <a href="/WePerform/public/index.php/home/parm">Mate Parm</a></li>
-					<li> <a href="/WePerform/public/index.php/home/justin">Mate Justin</a></li>
-					<li> <a href="/WePerform/public/index.php/home/matthew">Mate Matthew</a></li>
-					<li> <a href="/WePerform/public/index.php/home/jason">Mate Jason</a></li>
-				</ul>  
-
+				<h2><a href="\chores"><center>LAB 6 - COMP4711</center></a></h2>
 			</div>
 
 			<div class="footer">

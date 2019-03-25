@@ -8,26 +8,7 @@ class Home extends Controller
 	{
             return view('welcome_message');
 	}
-
-	public function jason()
-	{
-		return view('jason');
-	}
-	      
-  public function justin()
-  {
-      return view('justin');
-  }
-  
-  public function matthew()
-  {
-	  return view('matthew');
-  }
-  
-  public function parm() 
-	{
-		return view('parm');
-	}
+	
 	//--------------------------------------------------------------------
 
 }
